@@ -1,0 +1,216 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap');
+
+@font-face {
+    font-family: Calibre;
+    src: url(Calibre/CalibreBlack.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0A192F;
+}
+nav{
+    height: 10%;
+}
+.logo{
+    font-family: 'Fira Code', monospace;
+    text-decoration: none;
+    color: #64ffda;
+}
+.itemNum{
+    color: #64ffda;
+    font-family: 'Fira Code', monospace;
+}
+.nav-link{
+    color: #ccd6f6;
+    font-family: 'Fira Code', monospace;
+    font-size: small;
+
+}
+.nav-item{
+    padding: 5px 10px;
+}
+.resumeBtn{
+    font-family: 'Fira Code', monospace;
+    color: #64ffda;
+    background: none;
+    border: 1px solid #64ffda;
+    border-radius: 5px;
+    font-size: small;
+
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, #64ffda 50%) right;
+    background-size: 200%;
+    transition: 0.4s ease-out;
+    
+}
+
+:hover.nav-link{
+    padding-bottom: 20px;
+    color: #64ffda;
+    transition : 0.5s;
+}
+
+:hover.resumeBtn{
+    font-weight: 500;
+    color: black;
+    background-position: left;
+
+}
+
+
+
+@media(max-width: 991px){
+    .sidebar{
+        /* background: linear-gradient(to left, #0F172A 20%, #112044 60%); */
+        background-color: #112240;
+        backdrop-filter: blur(10px);
+    }
+    #ulNav{
+        justify-content: center!important;
+    }
+
+    .resumeBtn{
+        font-size: larger !important;
+    }
+
+}
+
+.mynameIs , .descrip{
+    font-family: 'Fira Code', monospace;
+    font-size: large;
+}
+
+.nameTitle , .status{
+    /* font-weight: 600; */
+    font-size: 3rem;
+    font-family: Calibre;
+}
+
+.moreAbt {
+    animation: pulse 9s infinite;
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+    color: #64ffda;
+    background: none;
+    border: 1px solid #64ffda;
+    border-radius: 3px;
+
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, #64ffda 50%) right;
+    
+    background-size: 200%;
+    transition: 0.4s ease-out;
+}
+
+.moreAbt:hover {
+    font-weight: 500;
+    color: black;
+    background-position: left;
+}
+
+.moredev{
+    animation: pulse 9s infinite;
+    width: 175px;
+}
+
+.about-me-title , .description-me, .languages-div , .my-projects-title
+, .card-body{
+    color: #ccd6f6;
+    font-family: 'Fira Code', monospace;
+}
+.about-me-card , .my-projects-section{
+    width: 100%;
+    /* background-color: #112240; */
+}
+
+.description-div{
+    width: 60%;
+    height: 100%;
+    text-align: justify;
+}
+.description-div p{
+    font-size: 0.9rem;
+    width: 100%;
+    color: #ccd6f6;
+    font-family: 'Fira Code', monospace;
+}
+
+.languages-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    list-style-type: square ;
+    color: #64ffdbad;
+    font-weight: lighter;
+    }
+
+.img-me{
+    width: 30%;
+    height: 80%;
+}
+
+.img-me img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3rem;
+}
+.my-projects-cards{
+    width: 100%;
+    height: 400px;
+    /* background-color: wheat; */
+
+}
+
+.card{
+    background-color: #112240;
+    height: 100%;
+    
+}
+.card-text{
+    font-size: 0.9rem ;
+    font-weight: lighter !important;
+}
+
+.my-projects-section{
+    width: 100%;
+    height: 70vh;
+    /* background-color: wheat; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
