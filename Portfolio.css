@@ -162,43 +162,75 @@ nav{
     height: 100%;
     border-radius: 0.3rem;
 }
-.my-projects-cards{
-    width: 100%;
-    height: 400px;
-    /* background-color: wheat; */
-
+.cards-contents{
+    height: 100vh;
 }
-
-.card{
-    background-color: #112240;
+.my-projects-section{
     height: 100%;
+    width: 100%;
+    
     
 }
+
+.my-projects-cards{
+
+    background-color: #112240;
+    min-height: 30%;
+    max-height: 30%;
+    border-radius: 0.5rem;
+    margin: 0px 1%;
+}
+
 .card-text{
     font-size: 0.9rem ;
     font-weight: lighter !important;
+    text-align: justify;
 }
 
-.my-projects-section{
+
+.project-icon{
     width: 100%;
-    height: 70vh;
-    /* background-color: wheat; */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(2, 1fr); */
-    grid-column-gap: 5%;
-    grid-row-gap: 5%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.card-body{
+    height: 45%;
+}
 
+.prg-languages-div{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 15%;
+    color: aliceblue;
+}
 
+.folder-icon , .share-icon{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* width: 100px;
+    height: 50px; */
+}
 
+.folder-icon i{
+    font-size: 3rem;
+}
 
+.share-icon{
+    font-size: 1rem;
+}
 
-
-
-
-
+.prg-language{
+    color: #ccd6f6;
+    border: solid 2px #ccd6f6;
+    border-radius: 20px ;
+    padding: 0px 9px;
+    margin: 0px 5px ;
+}
 
 
 
