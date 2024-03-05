@@ -86,7 +86,7 @@ function showProjects() {
 
         // Create elements for project card, icons, title, description, and programming languages
         let projectCard = document.createElement("div");
-        projectCard.classList.add("my-projects-cards", "px-4", "py-2", "mb-5", "col-md-3");
+        projectCard.classList.add("my-projects-cards", "px-4", "py-2", "mb-5");
 
         let projectIcon = document.createElement("div");
         projectIcon.classList.add("project-icon");
