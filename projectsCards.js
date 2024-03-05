@@ -70,6 +70,27 @@ const projectsCards = [
         languages: ["HTML", "CSS", "sql"],
         linkOnGithub: "https://elzero.org/tutorials-create-image-slider/",
     },
+    {
+        id: 4,
+        name: "Calculator",
+        description: "calculator with JavaScript",
+        languages: ["HTML", "CSS", "JavaScript"],
+        linkOnGithub: "https://github.com/AshrafMD09/Portfolio/blob/master/Portfolio.css",
+    },
+    {
+        id: 5,
+        name: "World Cup",
+        description: "The first project with PHP, the world cup groups",
+        languages: ["HTML", "CSS", "PHP"],
+        linkOnGithub: "https://elzero.org/tutorials-create-image-slider/",
+    },
+    {
+        id: 6,
+        name: "ReadWell",
+        description: "The first project with PHP, the world cup groups",
+        languages: ["HTML", "CSS", "sql"],
+        linkOnGithub: "https://elzero.org/tutorials-create-image-slider/",
+    },
     
 ];
 
@@ -86,7 +107,7 @@ function showProjects() {
 
         // Create elements for project card, icons, title, description, and programming languages
         let projectCard = document.createElement("div");
-        projectCard.classList.add("my-projects-cards", "px-4", "py-2", "mb-5");
+        projectCard.classList.add("my-projects-cards", "px-4", "pt-3", "mb-4");
 
         let projectIcon = document.createElement("div");
         projectIcon.classList.add("project-icon");
@@ -126,6 +147,7 @@ function showProjects() {
             prgLanguage.classList.add("prg-language");
             prgLanguage.textContent = item.languages[j];
             prgLanguagesDiv.appendChild(prgLanguage);
+            
         }
 
         // Append created elements to the project card
@@ -138,6 +160,7 @@ function showProjects() {
         // Append the project card to the container
         my_projects_section.appendChild(projectCard);
     }
+    
 }
 
 
