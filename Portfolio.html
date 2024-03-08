@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashraf's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/img/Bild.jpg">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -51,7 +52,7 @@
                 </ul>
 
                 <div id=""  class="d-flex justify-content-center align-items-center gap-3 mx-2">
-                    <button href="#resume" class="resumeBtn px-3 py-1">Resume</button>
+                    <a href="Lebenslauf/Lebenslauf_Informatiker.pdf" target="_blank" class="resumeBtn px-3 py-1">Resume</a>
                 </div>
 
                 </div>
@@ -59,27 +60,33 @@
             </div>
         </nav>
 
-        <!-- Card Title -->
+        <!-- About me Section -->
 
-        <div id="gg" class="container d-flex align-items-center h-50">
-            <div class="">
-                <p data-aos="fade" data-aos-duration="2000" class="mynameIs" style="color: #64ffda;">Hi, my name is </p>
-                <h1 data-aos="fade" data-aos-duration="2500" class="nameTitle"style="color: #ccd6f6;">Mohamed Achraf Jaouane</h1>
-                <h1 data-aos="fade-up" data-aos-duration="2000" class="status"style="color: #8892B0;">Junior Web Developer</h1>
-                <div data-aos="fade-up" data-aos-duration="3000" class="pt-3">
+        <div id="hi-page" class="container d-flex align-items-center">
+            <div data-aos="fade" data-aos-duration="2000" class="">
+                <p    class="mynameIs">Hi, my name is </p>
+                <h1  class="nameTitle"style="color: #ccd6f6;">Mohamed Achraf Jaouane</h1>
+                <h1  class="status"style="color: #8892B0;">Junior Web Developer</h1>
+                <div class="pt-3">
                         <p class="descrip"style="color: #ccd6f6;">Im a software engineer specializing in building (and occasionally designing)<br> exceptional digital experiences. 
                             Currently, Im focused on building accessible,<br> human-centered products at Upstatement.</p>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="3000" class="moredev mt-5"><a href="#" class="moreAbt px-4 py-2 ">More About me </a></div>
+
+                <div data-aos="fade-up" data-aos-duration="3000" class="moredev mt-5">
+                    <a href="#about" class="moreAbt px-4 py-2 ">More About me </a>
+                </div>
             </div>
         </div>
 
         <!-- About me -->
-        <div class="container mb-5" id="about">
+        <div data-aos="fade-up" data-aos-duration="5000" class="container mb-5" id="about">
 
-            <h2 class="about-me-title mb-5 fw-bold">About me <span class="line-titel"></span></h2>
+            <div class="d-flex align-items-center">
+                <h2 class="about-me-title my-5 fw-bold me-5">About me</h2>
+                <hr class="line-titel"></hr>
+            </div>
 
-            <main class="about-me-card d-flex justify-content-between row">
+            <main data-aos="fade-up" data-aos-duration="5000" class="about-me-card d-flex justify-content-between row">
                 <div class="description-div col-md-7">
                     <p class="description-me">
                         Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
@@ -90,7 +97,7 @@ I also recently launched a course that covers everything you need to build a web
 
                     </p>
                     <p>Here are a few technologies I’ve been working with recently:</p>
-                    <div class="languages-div">
+                    <div class="languages-div" >
                         
                         <ul class="languages-list">
                             <li>HTML</li>
@@ -103,8 +110,8 @@ I also recently launched a course that covers everything you need to build a web
                     </div>
                 </div>
 
-                <div class="img-me col-md-4">
-                    <div class="gradient-img"></div>
+                <div class="img-me col-md-4" >
+                    <div class="gradient-img" ></div>
                     <img src="img/Bild.jpg" alt="My Image">
                 </div>
             </main>
@@ -114,12 +121,20 @@ I also recently launched a course that covers everything you need to build a web
         <!-- My Projects -->
         <div class="cards-contents container my-5" id="projects">
 
-            <h2 class="my-projects-title py-5 fw-bold">My Projects</h2>
+            <div class="d-flex align-items-center">
+                <h2  class="my-projects-title py-5 fw-bold me-5">My Projects</h2>
+                <hr class="line-titel"></hr>
+            </div>
+            
 
-            <div class="my-projects-section">
+            <div  class="my-projects-section">
 
                 <!-- Cards are here :) -->
 
+            </div>
+            
+            <div id="" data-aos="fade-up" data-aos-duration="5000" class=" mt-5 w-100 text-center">
+                <button id="show-more" class="showMoreBtn px-4 py-2 "></button>
             </div>
         </div>
 
@@ -127,7 +142,7 @@ I also recently launched a course that covers everything you need to build a web
 
         <div class="contact-section container my-5" id="contact">
 
-            <h2 class="my-projects-title text-center my-5 fw-bold">Get in Touch</h2>
+            <h2 class="contact-title text-center my-5 fw-bold">Get In Touch</h2>
         
             <div class="contact-items ">
         
@@ -142,8 +157,6 @@ I also recently launched a course that covers everything you need to build a web
                     <a href="mailto:medachraf2012@gmail.com" class="moreAbt px-4 py-2 ">Say Hello ! </a>
                 </div>
 
-
-        
             </div>
 
             
@@ -157,6 +170,11 @@ I also recently launched a course that covers everything you need to build a web
             
             <p>Built by Med Ashraf</p>
         </footer>
+
+        <!-- <div class="mail-me">
+            <div><p >email@email.com</p></div>
+            <div class="vl"></div>
+        </div> -->
 
 
 <script src="projectsCards.js"></script>

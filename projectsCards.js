@@ -1,166 +1,102 @@
-// const projectsCards = [
-//     {
-//         id:1,
-//         name:"Calculator",
-//         description:"calculator with javaScript",
-//         languages:["HTML","CSS","JavaScript"],
-//         linkOnGithub:"https://elzero.org/tutorials-create-image-slider/",
-//     },
-//     {
-//         id:2,
-//         name:"World Cup",
-//         description:"The first project with php, the world cup groups",
-//         languages:["HTML","CSS","PHP"],
-//         linkOnGithub:"https://elzero.org/tutorials-create-image-slider/",
-//     },
-// ];
-
-// let my_projects_section = document.querySelector("my-projects-section");
-
-// showProjects();
-
-
-// function showProjects(){
-//     for(let i = 0; i < projectsCards.length; i++){
-//     let item = projectsCards[i];
-
-//         document.write(`<div class="my-projects-cards px-4 py-2 mb-5 col-md-3">`);
-//         document.write(`<div class="project-icon">`);
-//         document.write(`<div class="folder-icon"><i class="fa-regular fa-folder style="color: #63E6BE;""></i></div>`);
-//         document.write(`<div class="share-icon"><a href="#"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ccd6f6;"></i></a></div>`);
-//         document.write(`</div>`);
-        
-//         document.write(`<div class="card-body">`);
-//         document.write(`<h5 class="card-title py-3">${item.name}</h5>`);
-//         document.write(`<p class="card-text">${item.description}</p>`);
-//         document.write(`</div>`);
-        
-//         document.write(`<div class="prg-languages-div">`);
-//         for(let j = 0; j < item.languages.length; j++){
-//         document.write(`<p class="prg-language">${item.languages[j]}</p>`);
-//         }
-//         document.write(`</div>`);
-        
-//         document.write(`</div>`);
-        
-
-//     }
-
-// }
-
 const projectsCards = [
     {
         id: 1,
-        name: "Calculator",
-        description: "calculator with JavaScript",
-        languages: ["HTML", "CSS", "JavaScript"],
-        linkOnGithub: "https://github.com/AshrafMD09/Portfolio/blob/master/Portfolio.css",
+        name: "E-Commerce Web Site",
+        description: "E-Commerce Web Site With WordPress",
+        languages: ["WordPress"],
+        linkOnGithub: "https://dev-braceletsworld.pantheonsite.io/",
     },
     {
         id: 2,
-        name: "World Cup",
-        description: "The first project with PHP, the world cup groups",
-        languages: ["HTML", "CSS", "PHP"],
-        linkOnGithub: "https://elzero.org/tutorials-create-image-slider/",
+        name: "ReadWell",
+        description: "An Online Library Project",
+        languages: ["HTML", "CSS", "PHP", "SQL"],
+        linkOnGithub: "https://github.com/AshrafMD09/Readwell",
     },
     {
         id: 3,
-        name: "ReadWell",
-        description: "The first project with PHP, the world cup groups",
-        languages: ["HTML", "CSS", "sql"],
-        linkOnGithub: "https://elzero.org/tutorials-create-image-slider/",
+        name: "JavaScript Workshop",
+        description: "My first mini projects with JavaScript",
+        languages: ["HTML", "CSS", "JavaScript"],
+        linkOnGithub: "https://github.com/AshrafMD09/JavaScript-Workshop",
     },
     {
         id: 4,
-        name: "Calculator",
-        description: "calculator with JavaScript",
+        name: "Validation Form",
+        description: "Validation Form with JavaScript & Regex",
         languages: ["HTML", "CSS", "JavaScript"],
-        linkOnGithub: "https://github.com/AshrafMD09/Portfolio/blob/master/Portfolio.css",
+        linkOnGithub: "https://github.com/AshrafMD09/Validation-Form",
     },
     {
         id: 5,
         name: "World Cup",
-        description: "The first project with PHP, the world cup groups",
+        description: "The first project with PHP. The World Cup groups",
         languages: ["HTML", "CSS", "PHP"],
-        linkOnGithub: "https://elzero.org/tutorials-create-image-slider/",
+        linkOnGithub: "https://github.com/AshrafMD09/World-Cup",
     },
     {
         id: 6,
-        name: "ReadWell",
-        description: "The first project with PHP, the world cup groups",
-        languages: ["HTML", "CSS", "sql"],
-        linkOnGithub: "https://elzero.org/tutorials-create-image-slider/",
+        name: "Receipts App",
+        description: "Using API for Receipts Web Site",
+        languages: ["HTML", "CSS", "JavaScript"],
+        linkOnGithub: "https://github.com/AshrafMD09/Receipt-App",
     },
+    {
+        id: 7,
+        name: "Solicode Projects",
+        description: "All the projects I did in my school",
+        languages: ["HTML", "CSS", "PHP","SQL","JavaScript... "],
+        linkOnGithub: "https://github.com/AshrafMD09/Solicode-s-Projects",
+    },
+
     
 ];
 
-// Select the container where projects will be displayed
-document.addEventListener("DOMContentLoaded", function() {
-    showProjects();
-});
 
-function showProjects() {
     let my_projects_section = document.querySelector(".my-projects-section");
-    // Loop through each project in the projectsCards array
-    for (let i = 0; i < projectsCards.length; i++) {
-        let item = projectsCards[i];
 
-        // Create elements for project card, icons, title, description, and programming languages
-        let projectCard = document.createElement("div");
+// Keep track of whether all cards are shown
+let allCardsShown = false;
+
+const postMethods = () => {
+    const cardsToShow = allCardsShown ? projectsCards.length : 6;
+
+    // Loop through the first 'cardsToShow' items of the projectsCards array
+    projectsCards.slice(0, cardsToShow).forEach((item) => {
+        const projectCard = document.createElement('div');
         projectCard.classList.add("my-projects-cards", "px-4", "pt-3", "mb-4");
+        projectCard.setAttribute("data-aos","fade", "data-aos-duration","1000");
 
-        let projectIcon = document.createElement("div");
-        projectIcon.classList.add("project-icon");
-
-        let folderIcon = document.createElement("div");
-        folderIcon.classList.add("folder-icon");
-        let folderIconContent = document.createElement("i");
-        folderIconContent.classList.add("fa-regular", "fa-folder");
-        folderIconContent.style.color = "#63E6BE";
-        folderIcon.appendChild(folderIconContent);
-
-        let shareIcon = document.createElement("div");
-        shareIcon.classList.add("share-icon");
-        let shareLink = document.createElement("a");
-        shareLink.href = item.linkOnGithub;
-        let shareIconContent = document.createElement("i");
-        shareIconContent.classList.add("fa-solid", "fa-arrow-up-right-from-square");
-        shareIconContent.style.color = "#ccd6f6";
-        shareLink.appendChild(shareIconContent);
-        shareIcon.appendChild(shareLink);
-
-        let cardBody = document.createElement("div");
-        cardBody.classList.add("card-body");
-        let cardTitle = document.createElement("h5");
-        cardTitle.classList.add("card-title", "py-3");
-        cardTitle.textContent = item.name;
-        let cardDescription = document.createElement("p");
-        cardDescription.classList.add("card-text");
-        cardDescription.textContent = item.description;
-        cardBody.appendChild(cardTitle);
-        cardBody.appendChild(cardDescription);
-
-        let prgLanguagesDiv = document.createElement("div");
-        prgLanguagesDiv.classList.add("prg-languages-div");
-        for (let j = 0; j < item.languages.length; j++) {
-            let prgLanguage = document.createElement("p");
-            prgLanguage.classList.add("prg-language");
-            prgLanguage.textContent = item.languages[j];
-            prgLanguagesDiv.appendChild(prgLanguage);
-            
-        }
-
-        // Append created elements to the project card
-        projectIcon.appendChild(folderIcon);
-        projectIcon.appendChild(shareIcon);
-        projectCard.appendChild(projectIcon);
-        projectCard.appendChild(cardBody);
-        projectCard.appendChild(prgLanguagesDiv);
-
-        // Append the project card to the container
+        projectCard.innerHTML = `          
+            <div class="project-icon" >
+                <div class="folder-icon"><i class="fa-regular fa-folder" style="color: #63E6BE;"></i></div>
+                <div class="share-icon"><a href="${item.linkOnGithub}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ccd6f6;"></i></a></div>
+            </div>
+            <div class="card-body">
+                <a href ="${item.linkOnGithub}"><h5 class="card-title py-3">${item.name}</h5></a>
+                <p class="card-text">${item.description}</p>
+            </div>
+            <div class="prg-languages-div">
+                <p class="prg-language">${item.languages.join("  ")}</p>
+            </div>`;
+        
         my_projects_section.appendChild(projectCard);
+    });
+
+    // Show the "Show More" button if there are more than 6 cards
+    if (projectsCards.length > 6) {
+        const showMoreButton = document.getElementById('show-more');
+        showMoreButton.textContent = allCardsShown ? 'Show Less' : 'Show More';
+        showMoreButton.addEventListener('click', toggleShowMore);
     }
-    
-}
+};
+
+const toggleShowMore = () => {
+    allCardsShown = !allCardsShown;
+    my_projects_section.innerHTML = '';
+    postMethods();
+};
+
+postMethods();
 
 
