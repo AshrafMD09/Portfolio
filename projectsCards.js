@@ -73,7 +73,7 @@ const postMethods = () => {
                 <div class="share-icon"><a href="${item.linkOnGithub}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ccd6f6;"></i></a></div>
             </div>
             <div class="card-body">
-                <a href ="${item.linkOnGithub}"><h5 class="card-title py-3">${item.name}</h5></a>
+                <a href ="${item.linkOnGithub}" target="_blank"><h5 class="card-title py-3">${item.name}</h5></a>
                 <p class="card-text">${item.description}</p>
             </div>
             <div class="prg-languages-div">

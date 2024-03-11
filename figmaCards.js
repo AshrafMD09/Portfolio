@@ -38,7 +38,7 @@ const showFigmaCards = () => {
             </a>
         
     </div>
-    `;
+`;
         
             figma_projects_section.appendChild(figmaCard);
     });
